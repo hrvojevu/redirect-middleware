@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 
 
 class UrlRedirectMiddleware:
-    blacklist = ('/register', '/course', '/u/', '/account', '/search', '/about', '/blog', '/contact', '/donate')
+    blacklist = ('/course', '/u/', '/account', '/search', '/about', '/blog', '/contact', '/donate')
 
     def process_request(self, request):
         url_path = request.META['PATH_INFO']
